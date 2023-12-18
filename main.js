@@ -19,6 +19,7 @@ function ujListaelem(ertek) {
 }
 
 function minKivalaszt() {
+    let minimum = 99999999
     for (let i = 0; i < szamlista.length; i++) {
         if (szamlista[i] < minimum) {
             minimum = szamlista[i]
