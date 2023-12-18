@@ -19,11 +19,11 @@ function ujListaelem(ertek) {
 }
 
 function minKivalaszt() {
-    let minimum = 99999999
+    let max = 0
     for (let i = 0; i < szamlista.length; i++) {
-        if (szamlista[i] < minimum) {
-            minimum = szamlista[i]
+        if (szamlista[i] > max) {
+            max = szamlista[i]
         }
     }
-    document.getElementById("min").innerHTML = "Min: " + minimum
+    document.getElementById("min").innerHTML = "Max: " + max
 }
