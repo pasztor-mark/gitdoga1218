@@ -4,6 +4,7 @@ function szamFelvetel() {
     if (ertek > 0 || ertek <= 0) {
         szamlista.push(ertek)
         ujListaelem(ertek)
+        minKivalaszt();
     }
     
 }
@@ -15,4 +16,13 @@ function ujListaelem(ertek) {
     }
     text += ertek
     document.getElementById("lista").innerHTML = text
+}
+
+function minKivalaszt() {
+    for (let i = 0; i < szamlista.length; i++) {
+        if (szamlista[i] < minimum) {
+            minimum = szamlista[i]
+        }
+    }
+    document.getElementById("min").innerHTML = "Min: " + minimum
 }
